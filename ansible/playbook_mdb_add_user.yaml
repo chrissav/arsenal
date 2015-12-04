@@ -1,0 +1,12 @@
+- name: Create MDB and User
+  hosts: ~tag_Environment_stg:&tag_Component_mongo:&tag_stack_mt01
+  gather_facts: False
+  tasks:
+    - name: Install pymongo
+      pip: name=pymongo
+      sudo: yes
+    - name: Create DB and User
+      mongodb_user: database=sc_mba_oars_stg replica_set=mt_stg user=test password=password roles="readWrite" state=absent
+    - name: Uninstall pymongo
+      pip: name=pymongo state=absent
+      sudo: yes

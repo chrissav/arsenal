@@ -1,0 +1,11 @@
+Sorted Student List
+3, Chiara, 28, 3.9
+5, Sam, 24, 3.7
+15, Sarah, 26, 4.0
+24, Will, 23, 3.6
+31, Christine, 26, 4.0
+45, Lauren, 21, 2.9
+56, Tim, 22, 3.7
+72, Charlie, 22, 2.8
+88, Tom, 32, 3.5
+97, Robert, 25, 3.2
