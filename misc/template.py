@@ -7,8 +7,8 @@ def answer(str):
 		print i
 
 def main():
-	parser = argparse.ArgumentParser(description='Adds a user to group(s) in AWS IAM')
-	parser.add_argument('--string', help="string")
+	parser = argparse.ArgumentParser(description='Description of script')
+	parser.add_argument('s', '--string', help="string")
 	args = parser.parse_args()
 
 	answer(args.string)
