@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# From adventofcode.com/day/1
+# From adventofcode.com/day/2
 
 # How much wrapping paper is needed?
 
