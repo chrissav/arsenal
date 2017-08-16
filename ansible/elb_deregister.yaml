@@ -1,0 +1,16 @@
+- name: Ubuntu Upgrades Complete Process
+  hosts: ~tag_Name_{{ hostname }}
+  gather_facts: false
+  tasks:
+    - name: Gathering ec2 facts
+      action: ec2_facts
+      tags: deregister
+    - name: Instance De-register
+      local_action:
+        module: ec2_elb
+        instance_id: "{{ ansible_ec2_instance_id }}"
+        state: absent
+        region: "{{ ansible_ec2_placement_region }}"
+      register: elb_output
+      tags: deregister
+    - debug: msg="Deregister {{ ansible_ec2_instance_id }} from {{ ec2_elbs }}"
