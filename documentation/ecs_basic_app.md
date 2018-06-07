@@ -19,7 +19,7 @@ published: true
 8. Clean Up
 
 ### 1. Create the Docker Images
-The Docker Images will need to be created for ECS to use.  We're going to use the image that was created in the [docker_compose runbook](https://tech-ops-runbook.2u.com/docker_compose/), with one minor change because the environment variables will be different in ECS.  In app.py on line 7 change
+The Docker Images will need to be created for ECS to use.  In app.py on line 7 change
 ```
 client = MongoClient(os.environ['ALPINE_DB_1_PORT_27017_TCP_ADDR'], 27017)
 ```
